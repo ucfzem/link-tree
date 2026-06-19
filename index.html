@@ -1,382 +1,106 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ucfzem — Links & Tools</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #1a1410;
-      --bg-card: #2d2219;
-      --bg-hover: #3a2c1f;
-      --text: #f5f0e8;
-      --text-sec: #d4c5b2;
-      --text-muted: #b8a58e;
-      --gold: #c8963e;
-      --gold-light: #d4a84b;
-      --gold-bright: #e8b85f;
-      --border: #3d2e1e;
-      --shadow: 0 4px 24px rgba(0,0,0,.5);
-      --glow: 0 0 24px rgba(200,150,62,.2);
-    }
-    [data-theme="light"] {
-      --bg: #f5eee6;
-      --bg-card: #faf4ec;
-      --bg-hover: #f0e3d4;
-      --text: #1a1410;
-      --text-sec: #4a3f35;
-      --text-muted: #8a7a6a;
-      --gold: #b8862e;
-      --gold-light: #9a7028;
-      --gold-bright: #c8963e;
-      --border: #d4c5b2;
-      --shadow: 0 4px 24px rgba(0,0,0,.1);
-      --glow: 0 0 24px rgba(200,150,62,.12);
-    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      user-select: text;
-      -webkit-user-select: text;
-      transition: background .3s, color .3s;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0c0c0c;
+      color: #f1f1f1;
       min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
     }
-    .container { max-width: 720px; margin: 0 auto; padding: 0 1.25rem; }
-
-    /* header */
-    .header {
-      text-align: center;
-      padding: 2.5rem 1.25rem 1.5rem;
-    }
+    .container { max-width: 480px; width: 100%; text-align: center; }
     .avatar {
       width: 80px; height: 80px;
       border-radius: 50%;
-      margin: 0 auto 1rem;
+      margin: 0 auto 1.5rem;
       display: block;
       object-fit: cover;
-      border: 2px solid var(--gold);
-      box-shadow: var(--glow);
+      border: 2px solid #3a3a3a;
     }
-    .header h1 {
-      font-size: 1.5rem;
+    h1 {
+      font-size: 1.8rem;
       font-weight: 700;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.5px;
     }
-    .header p {
-      color: var(--text-muted);
-      font-size: .9rem;
-      margin-top: .25rem;
+    .subtitle {
+      color: #a0a0a0;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
     }
-    .theme-toggle {
-      position: fixed;
-      top: 1rem; right: 1rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      color: var(--gold);
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 1.2rem;
-      display: flex; align-items: center; justify-content: center;
-      transition: all .2s;
-      z-index: 100;
-    }
-    .theme-toggle:hover { background: var(--bg-hover); }
-
-    /* categories */
-    .cat {
-      margin: 0 0 1.5rem;
-    }
-    .cat-header {
-      display: flex;
-      align-items: center;
-      gap: .5rem;
-      margin-bottom: .75rem;
-      padding-bottom: .5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .cat-icon { font-size: 1.2rem; }
-    .cat-title {
-      font-size: .85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      color: var(--gold);
-    }
-    .cat-count {
-      margin-left: auto;
-      font-size: .7rem;
-      color: var(--text-muted);
-      background: var(--bg-card);
-      padding: .15rem .55rem;
-      border-radius: 50px;
-    }
-
-    /* links */
-    .link {
-      display: flex;
-      align-items: center;
-      gap: .75rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: .85rem 1rem;
+    .links { display: flex; flex-direction: column; gap: 0.8rem; }
+    .link-card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+      padding: 1rem 1.2rem;
       text-decoration: none;
       color: inherit;
-      transition: all .2s;
-      margin-bottom: .5rem;
+      transition: all 0.2s ease;
+      text-align: left;
+      display: block;
     }
-    .link:hover {
-      background: var(--bg-hover);
-      border-color: var(--gold);
+    .link-card:hover {
+      background: #242424;
+      border-color: #4a4a4a;
       transform: translateY(-1px);
-      box-shadow: var(--glow);
     }
-    .link-icon {
-      width: 40px; height: 40px;
-      border-radius: 10px;
-      background: rgba(200,150,62,.12);
-      border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-    .link-body { flex: 1; min-width: 0; }
-    .link-name {
+    .link-title {
       font-weight: 600;
-      font-size: .95rem;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.3rem;
     }
+    .link-title .emoji { font-size: 1.3rem; }
     .link-desc {
-      color: var(--text-muted);
-      font-size: .78rem;
+      font-size: 0.85rem;
+      color: #909090;
       line-height: 1.4;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
-    .link-arrow {
-      color: var(--gold);
-      font-size: 1.1rem;
-      flex-shrink: 0;
-      opacity: 0;
-      transition: opacity .2s, transform .2s;
-    }
-    .link:hover .link-arrow {
-      opacity: 1;
-      transform: translateX(3px);
-    }
-
-    /* footer */
-    .footer {
-      text-align: center;
-      padding: 2rem 1.25rem;
-      color: var(--text-muted);
-      font-size: .8rem;
-    }
-    .footer a {
-      color: var(--gold-light);
-      text-decoration: none;
-    }
-    .footer a:hover { color: var(--gold-bright); }
-
-    /* animations */
-    .link { animation: fadeUp .4s ease forwards; opacity: 0; }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .link:nth-child(2) { animation-delay: .05s; }
-    .link:nth-child(3) { animation-delay: .1s; }
-    .link:nth-child(4) { animation-delay: .15s; }
-    .link:nth-child(5) { animation-delay: .2s; }
-    .link:nth-child(6) { animation-delay: .25s; }
-    .link:nth-child(7) { animation-delay: .3s; }
-    .link:nth-child(8) { animation-delay: .35s; }
-
-    @media (max-width: 480px) {
-      .header { padding: 2rem 1rem 1.25rem; }
-      .avatar { width: 60px; height: 60px; font-size: 1.6rem; }
-      .link { padding: .75rem .85rem; }
-      .link-desc { font-size: .72rem; }
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: #606060;
     }
   </style>
 </head>
 <body>
-
-  <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
-
   <div class="container">
-    <div class="header">
-      <img class="avatar" src="https://raw.githubusercontent.com/ucfzem/link-tree/main/avatar.png" alt="ucfzem" />
-      <h1>ucfzem tools</h1>
-      <p>Digital toolbox — SaaS, graphics, reading &amp; more</p>
-    </div>
-
-    <!-- SaaS -->
-    <div class="cat">
-      <div class="cat-header">
-        <span class="cat-icon">⚡</span>
-        <span class="cat-title">SaaS</span>
-        <span class="cat-count">3</span>
-      </div>
-      <a href="https://ucfzem.github.io/comptaeasy" class="link" target="_blank">
-        <div class="link-icon">📊</div>
-        <div class="link-body">
-          <div class="link-name">ComptaEasy</div>
-          <div class="link-desc">French accounting with OCR invoice import via Claude Vision</div>
-        </div>
-        <span class="link-arrow">→</span>
+    <img class="avatar" src="https://raw.githubusercontent.com/ucfzem/link-tree/main/avatar.png" alt="ucfzem" />
+    <h1>ucfzem</h1>
+    <p class="subtitle">Links &amp; Tools</p>
+    <div class="links">
+      <a href="https://ucfzem.github.io/photographer" class="link-card">
+        <div class="link-title"><span class="emoji">🎨</span> Graphics</div>
+        <div class="link-desc">Photography portfolio — themed collections, prints &amp; licensing.</div>
       </a>
-      <a href="https://ucfzem.github.io/lingotech" class="link" target="_blank">
-        <div class="link-icon">🗣️</div>
-        <div class="link-body">
-          <div class="link-name">Lingotech</div>
-          <div class="link-desc">French learning platform — conjugator, Pomodoro, AI assistant</div>
-        </div>
-        <span class="link-arrow">→</span>
+      <a href="https://ucfzem.github.io/quran-majeed-v3" class="link-card">
+        <div class="link-title"><span class="emoji">📚</span> Lectures</div>
+        <div class="link-desc">Quran Majeed — full Quran with translations, tafsir &amp; 30+ reciters.</div>
       </a>
-      <a href="https://ucfzem.github.io/nanogen-app" class="link" target="_blank">
-        <div class="link-icon">🎨</div>
-        <div class="link-body">
-          <div class="link-name">NanoGen</div>
-          <div class="link-desc">AI image generator with community feed &amp; Supabase</div>
-        </div>
-        <span class="link-arrow">→</span>
+      <a href="https://ucfzem.github.io/blog" class="link-card">
+        <div class="link-title"><span class="emoji">✍️</span> Blog</div>
+        <div class="link-desc">Articles on frontend, graphics, Islamic tech &amp; Moroccan culture.</div>
+      </a>
+      <a href="https://ucfzem.github.io/comptaeasy" class="link-card">
+        <div class="link-title"><span class="emoji">☁️</span> SaaS</div>
+        <div class="link-desc">ComptaEasy — French accounting with OCR invoice import via AI.</div>
       </a>
     </div>
-
-    <!-- Graphics -->
-    <div class="cat">
-      <div class="cat-header">
-        <span class="cat-icon">🎭</span>
-        <span class="cat-title">Graphics</span>
-        <span class="cat-count">3</span>
-      </div>
-      <a href="https://ucfzem.github.io/photographer" class="link" target="_blank">
-        <div class="link-icon">📸</div>
-        <div class="link-body">
-          <div class="link-name">Photographer</div>
-          <div class="link-desc">Portfolio &amp; prints — themed collections, licensing</div>
-        </div>
-        <span class="link-arrow">→</span>
-      </a>
-      <a href="https://ucfzem.github.io/ai-image-enhancer" class="link" target="_blank">
-        <div class="link-icon">✨</div>
-        <div class="link-body">
-          <div class="link-name">AI Image Enhancer</div>
-          <div class="link-desc">Upscale &amp; enhance photos with AI processing</div>
-        </div>
-        <span class="link-arrow">→</span>
-      </a>
-      <a href="https://ucfzem.github.io/sphere-gallery" class="link" target="_blank">
-        <div class="link-icon">🌐</div>
-        <div class="link-body">
-          <div class="link-name">Sphere Gallery</div>
-          <div class="link-desc">Interactive 3D sphere gallery for immersive visuals</div>
-        </div>
-        <span class="link-arrow">→</span>
-      </a>
-    </div>
-
-    <!-- Lecture -->
-    <div class="cat">
-      <div class="cat-header">
-        <span class="cat-icon">📖</span>
-        <span class="cat-title">Lecture</span>
-        <span class="cat-count">2</span>
-      </div>
-      <a href="https://ucfzem.github.io/quran-majeed-v3" class="link" target="_blank">
-        <div class="link-icon">🕌</div>
-        <div class="link-body">
-          <div class="link-name">Quran Majeed v3</div>
-          <div class="link-desc">Full Quran — translations, tafsir, 30+ reciters</div>
-        </div>
-        <span class="link-arrow">→</span>
-      </a>
-      <a href="https://ucfzem.github.io/tanger" class="link" target="_blank">
-        <div class="link-icon">🏛️</div>
-        <div class="link-body">
-          <div class="link-name">Tanger d'Antan</div>
-          <div class="link-desc">Vintage Tangier — photo archive &amp; history</div>
-        </div>
-        <span class="link-arrow">→</span>
-      </a>
-    </div>
-
-    <!-- Blogs -->
-    <div class="cat">
-      <div class="cat-header">
-        <span class="cat-icon">✍️</span>
-        <span class="cat-title">Blogs</span>
-        <span class="cat-count">2</span>
-      </div>
-      <a href="https://ucfzem.github.io/blog" class="link" target="_blank">
-        <div class="link-icon">📝</div>
-        <div class="link-body">
-          <div class="link-name">Blog</div>
-          <div class="link-desc">Articles on dev, Islamic tech, Moroccan culture</div>
-        </div>
-        <span class="link-arrow">→</span>
-      </a>
-      <a href="https://ucfzem.github.io/uz" class="link" target="_blank">
-        <div class="link-icon">🧰</div>
-        <div class="link-body">
-          <div class="link-name">UZ — Portfolio</div>
-          <div class="link-desc">Master toolbox &amp; project showcase</div>
-        </div>
-        <span class="link-arrow">→</span>
-      </a>
-    </div>
-
-    <!-- Extras -->
-    <div class="cat">
-      <div class="cat-header">
-        <span class="cat-icon">🔧</span>
-        <span class="cat-title">Extras</span>
-        <span class="cat-count">2</span>
-      </div>
-      <a href="https://ucfzem.github.io/urlshort" class="link" target="_blank">
-        <div class="link-icon">🔗</div>
-        <div class="link-body">
-          <div class="link-name">URL Shortener</div>
-          <div class="link-desc">Custom short links with analytics &amp; QR codes</div>
-        </div>
-        <span class="link-arrow">→</span>
-      </a>
-      <a href="https://ucfzem.github.io/tmpdrop" class="link" target="_blank">
-        <div class="link-icon">📦</div>
-        <div class="link-body">
-          <div class="link-name">TmpDrop</div>
-          <div class="link-desc">Temp file sharing — auto-delete after 24h</div>
-        </div>
-        <span class="link-arrow">→</span>
-      </a>
-    </div>
-
-    <div class="footer">
-      <a href="https://ucfzem.github.io/uz">ucfzem</a> &middot; crafted with gold &middot; 2026
-    </div>
+    <footer>© ucfzem · Built with ♥</footer>
   </div>
-
-  <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const btn = document.getElementById('themeBtn');
-      const isLight = html.getAttribute('data-theme') === 'light';
-      html.setAttribute('data-theme', isLight ? 'dark' : 'light');
-      btn.textContent = isLight ? '🌙' : '☀️';
-      localStorage.setItem('theme', isLight ? 'dark' : 'light');
-    }
-    const saved = localStorage.getItem('theme');
-    if (saved) {
-      document.documentElement.setAttribute('data-theme', saved);
-      document.getElementById('themeBtn').textContent = saved === 'light' ? '☀️' : '🌙';
-    }
-  </script>
 </body>
 </html>
