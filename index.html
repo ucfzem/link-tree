@@ -346,17 +346,27 @@
     /* Card animations */
     .link-card { animation: cardIn .4s ease forwards; opacity: 0; }
     @keyframes cardIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-    .link-card:nth-child(2) { animation-delay: .05s; }
-    .link-card:nth-child(3) { animation-delay: .1s; }
-    .link-card:nth-child(4) { animation-delay: .15s; }
-    .link-card:nth-child(5) { animation-delay: .2s; }
-    .link-card:nth-child(6) { animation-delay: .25s; }
-    .link-card:nth-child(7) { animation-delay: .3s; }
-    .link-card:nth-child(8) { animation-delay: .35s; }
-    .link-card:nth-child(9) { animation-delay: .4s; }
-    .link-card:nth-child(10) { animation-delay: .45s; }
-    .link-card:nth-child(11) { animation-delay: .5s; }
-    .link-card:nth-child(12) { animation-delay: .55s; }
+    .link-card:nth-child(2) { animation-delay: .04s; }
+    .link-card:nth-child(3) { animation-delay: .08s; }
+    .link-card:nth-child(4) { animation-delay: .12s; }
+    .link-card:nth-child(5) { animation-delay: .16s; }
+    .link-card:nth-child(6) { animation-delay: .2s; }
+    .link-card:nth-child(7) { animation-delay: .24s; }
+    .link-card:nth-child(8) { animation-delay: .28s; }
+    .link-card:nth-child(9) { animation-delay: .32s; }
+    .link-card:nth-child(10) { animation-delay: .36s; }
+    .link-card:nth-child(11) { animation-delay: .4s; }
+    .link-card:nth-child(12) { animation-delay: .44s; }
+    .link-card:nth-child(13) { animation-delay: .48s; }
+    .link-card:nth-child(14) { animation-delay: .52s; }
+    .link-card:nth-child(15) { animation-delay: .56s; }
+    .link-card:nth-child(16) { animation-delay: .6s; }
+    .link-card:nth-child(17) { animation-delay: .64s; }
+    .link-card:nth-child(18) { animation-delay: .68s; }
+    .link-card:nth-child(19) { animation-delay: .72s; }
+    .link-card:nth-child(20) { animation-delay: .76s; }
+    .link-card:nth-child(21) { animation-delay: .8s; }
+    .link-card:nth-child(22) { animation-delay: .84s; }
 
     @media (min-width: 48rem) {
       .link-icon { width: 3rem; height: 3rem; }
@@ -400,9 +410,9 @@
       </div>
 
       <div class="stats">
-        <div class="stat-card"><div class="stat-icon">📦</div><div class="stat-value">12</div><div class="stat-label">Projects</div></div>
-        <div class="stat-card"><div class="stat-icon">🛠️</div><div class="stat-value">8</div><div class="stat-label">Tools Used</div></div>
-        <div class="stat-card"><div class="stat-icon">🔗</div><div class="stat-value">12</div><div class="stat-label">Links</div></div>
+        <div class="stat-card"><div class="stat-icon">📦</div><div class="stat-value">31</div><div class="stat-label">Projects</div></div>
+        <div class="stat-card"><div class="stat-icon">🛠️</div><div class="stat-value">22</div><div class="stat-label">Live Tools</div></div>
+        <div class="stat-card"><div class="stat-icon">🔗</div><div class="stat-value">22</div><div class="stat-label">Links</div></div>
       </div>
 
       <div class="search-wrap">
@@ -419,7 +429,8 @@
         <button class="filter-btn" data-cat="graphics" onclick="setFilter('graphics')">Graphics<span class="indicator"></span></button>
         <button class="filter-btn" data-cat="lecture" onclick="setFilter('lecture')">Lecture<span class="indicator"></span></button>
         <button class="filter-btn" data-cat="blogs" onclick="setFilter('blogs')">Blogs<span class="indicator"></span></button>
-        <button class="filter-btn" data-cat="extras" onclick="setFilter('extras')">Extras<span class="indicator"></span></button>
+        <button class="filter-btn" data-cat="tools" onclick="setFilter('tools')">Tools<span class="indicator"></span></button>
+        <button class="filter-btn" data-cat="health" onclick="setFilter('health')">Health<span class="indicator"></span></button>
       </div>
 
       <div class="links-wrap" id="linksWrap">
@@ -493,16 +504,86 @@
           <div class="glow"></div>
         </a>
 
-        <a href="https://ucfzem.github.io/urlshort" class="link-card" data-cat="extras" target="_blank">
+        <a href="https://ucfzem.github.io/urlshort" class="link-card" data-cat="tools" target="_blank">
           <div class="link-icon" style="background:linear-gradient(135deg,#14b8a6,#0d9488)">🔗</div>
           <div class="link-body"><div class="link-title">URL Shortener</div><div class="link-desc">Custom short links with analytics &amp; QR codes</div></div>
           <div class="link-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></div>
           <div class="glow"></div>
         </a>
 
-        <a href="https://ucfzem.github.io/tmpdrop" class="link-card" data-cat="extras" target="_blank">
+        <a href="https://ucfzem.github.io/tmpdrop" class="link-card" data-cat="tools" target="_blank">
           <div class="link-icon" style="background:linear-gradient(135deg,#64748b,#475569)">📦</div>
           <div class="link-body"><div class="link-title">TmpDrop</div><div class="link-desc">Temp file sharing — auto-delete after 24h</div></div>
+          <div class="link-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></div>
+          <div class="glow"></div>
+        </a>
+
+        <a href="https://ucfzem.github.io/snap-describe" class="link-card" data-cat="graphics" target="_blank">
+          <div class="link-icon" style="background:linear-gradient(135deg,#a855f7,#7c3aed)">👁️</div>
+          <div class="link-body"><div class="link-title">Snap Describe</div><div class="link-desc">AI vision — describe any image with AI</div></div>
+          <div class="link-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></div>
+          <div class="glow"></div>
+        </a>
+
+        <a href="https://ucfzem.github.io/drawingsand" class="link-card" data-cat="graphics" target="_blank">
+          <div class="link-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706)">🎨</div>
+          <div class="link-body"><div class="link-title">DrawingSand</div><div class="link-desc">Creative drawing &amp; sand art</div></div>
+          <div class="link-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></div>
+          <div class="glow"></div>
+        </a>
+
+        <a href="https://ucfzem.github.io/pristine" class="link-card" data-cat="graphics" target="_blank">
+          <div class="link-icon" style="background:linear-gradient(135deg,#06b6d4,#0891b2)">📷</div>
+          <div class="link-body"><div class="link-title">Pristine</div><div class="link-desc">Photo editing &amp; enhancement tool</div></div>
+          <div class="link-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></div>
+          <div class="glow"></div>
+        </a>
+
+        <a href="https://ucfzem.github.io/magic-eraser" class="link-card" data-cat="graphics" target="_blank">
+          <div class="link-icon" style="background:linear-gradient(135deg,#ec4899,#db2777)">🧹</div>
+          <div class="link-body"><div class="link-title">Magic Eraser</div><div class="link-desc">AI inpainting — remove objects from photos</div></div>
+          <div class="link-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></div>
+          <div class="glow"></div>
+        </a>
+
+        <a href="https://ucfzem.github.io/ultralengua-pro" class="link-card" data-cat="saas" target="_blank">
+          <div class="link-icon" style="background:linear-gradient(135deg,#0ea5e9,#0284c7)">🌍</div>
+          <div class="link-body"><div class="link-title">Ultralengua Pro</div><div class="link-desc">Advanced language learning platform</div></div>
+          <div class="link-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></div>
+          <div class="glow"></div>
+        </a>
+
+        <a href="https://ucfzem.github.io/promptgenius" class="link-card" data-cat="saas" target="_blank">
+          <div class="link-icon" style="background:linear-gradient(135deg,#22c55e,#16a34a)">💡</div>
+          <div class="link-body"><div class="link-title">PromptGenius</div><div class="link-desc">AI prompt library &amp; generator</div></div>
+          <div class="link-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></div>
+          <div class="glow"></div>
+        </a>
+
+        <a href="https://ucfzem.github.io/launchkit" class="link-card" data-cat="saas" target="_blank">
+          <div class="link-icon" style="background:linear-gradient(135deg,#6366f1,#4f46e5)">🚀</div>
+          <div class="link-body"><div class="link-title">LaunchKit</div><div class="link-desc">SaaS starter kit &amp; launch tools</div></div>
+          <div class="link-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></div>
+          <div class="glow"></div>
+        </a>
+
+        <a href="https://ucfzem.github.io/projets" class="link-card" data-cat="blogs" target="_blank">
+          <div class="link-icon" style="background:linear-gradient(135deg,#f97316,#ea580c)">📂</div>
+          <div class="link-body"><div class="link-title">Projets</div><div class="link-desc">Project showcase &amp; case studies</div></div>
+          <div class="link-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></div>
+          <div class="glow"></div>
+        </a>
+
+        <a href="https://ucfzem.github.io/cvforge" class="link-card" data-cat="blogs" target="_blank">
+          <div class="link-icon" style="background:linear-gradient(135deg,#14b8a6,#0d9488)">📄</div>
+          <div class="link-body"><div class="link-title">CVForge</div><div class="link-desc">Resume &amp; CV builder for career growth</div></div>
+          <div class="link-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></div>
+          <div class="glow"></div>
+        </a>
+
+        <a href="https://ucfzem.github.io/rafeeq" class="link-card" data-cat="health" target="_blank">
+          <div class="link-icon" style="background:linear-gradient(135deg,#22d3ee,#06b6d4)">💚</div>
+          <div class="link-body"><div class="link-title">Rafeeq</div><div class="link-desc">Health &amp; wellness companion</div></div>
           <div class="link-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></div>
           <div class="glow"></div>
         </a>
